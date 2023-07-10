@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Davincible/goinsta/v3"
+	"github.com/kevinmtanadi/goinsta/v3"
 )
 
 func TestFeedUser(t *testing.T) {

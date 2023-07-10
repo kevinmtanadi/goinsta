@@ -44,7 +44,7 @@ func (users *Users) SetInstagram(insta *Instagram) {
 // Next allows to paginate after calling:
 // Account.Follow* and User.Follow*
 //
-// New user list is stored inside Users
+// # New user list is stored inside Users
 //
 // returns false when list reach the end.
 func (users *Users) Next() bool {
@@ -179,7 +179,7 @@ type User struct {
 	RecentlyBestiedByCount         int           `json:"recently_bestied_by_count"`
 	AccountType                    int           `json:"account_type"`
 	AccountBadges                  []interface{} `json:"account_badges,omitempty"`
-	FbIdV2                         int64         `json:"fbid_"`
+	FbIdV2                         string        `json:"fbid_"`
 	IsUnpublished                  bool          `json:"is_unpublished"`
 	UserTagsCount                  int           `json:"usertags_count"`
 	UserTagReviewEnabled           bool          `json:"usertag_review_enabled"`
@@ -330,7 +330,8 @@ func (insta *Instagram) NewUser() *User {
 // Info updates user info
 // extra query arguments can be passes one after another as func(key, value).
 // Only if an even number of string arguements will be passed, they will be
-//   used in the query.
+//
+//	used in the query.
 //
 // See example: examples/user/friendship.go
 func (user *User) Info(params ...interface{}) error {
@@ -572,7 +573,7 @@ func generateMuteData(user *User, opt muteOption) map[string]string {
 // This function performs a follow call. If user is private
 // you have to wait until he/she accepts you.
 //
-// If the account is public User.Friendship will be updated
+// # If the account is public User.Friendship will be updated
 //
 // See example: examples/user/follow.go
 func (user *User) Follow() error {
@@ -611,7 +612,7 @@ func (user *User) Follow() error {
 
 // Unfollow unfollows user
 //
-// User.Friendship will be updated
+// # User.Friendship will be updated
 //
 // See example: examples/user/unfollow.go
 func (user *User) Unfollow() error {
@@ -688,8 +689,8 @@ func (user *User) GetFeaturedAccounts() ([]*User, error) {
 
 // Feed returns user feeds (media)
 //
-// 	params can be:
-// 		string: timestamp of the minimum media timestamp.
+//	params can be:
+//		string: timestamp of the minimum media timestamp.
 //
 // For pagination use FeedMedia.Next()
 //
@@ -751,7 +752,8 @@ func (user *User) Tags(minTimestamp []byte) (*FeedMedia, error) {
 }
 
 // DownloadProfilePic will download a user's profile picture if available, and
-//   return it as a byte slice.
+//
+//	return it as a byte slice.
 func (user *User) DownloadProfilePic() ([]byte, error) {
 	if user.ProfilePicURL == "" {
 		return nil, ErrNoProfilePicURL
@@ -766,7 +768,9 @@ func (user *User) DownloadProfilePic() ([]byte, error) {
 }
 
 // DownloadProfilePicTo will download the user profile picture to the provided
-//   path. If path does not include a file name, one will be extracted automatically.
+//
+//	path. If path does not include a file name, one will be extracted automatically.
+//
 // File extention does not need to be set, and will be set automatically.
 func (user *User) DownloadProfilePicTo(dst string) error {
 	folder, fn := path.Split(dst)

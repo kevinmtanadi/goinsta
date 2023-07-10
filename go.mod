@@ -1,4 +1,4 @@
-module github.com/kevinmtanadi/goinsta/v3
+module github.com/kevinmtanadi/goinsta
 
 go 1.18
 

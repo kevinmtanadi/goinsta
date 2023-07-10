@@ -3,7 +3,7 @@ package tests
 import (
 	"testing"
 
-	"github.com/kevinmtanadi/goinsta/v3"
+	"github.com/kevinmtanadi/goinsta"
 )
 
 func TestProfileVisit(t *testing.T) {

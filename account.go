@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/kevinmtanadi/goinsta/v3/utilities"
+	"github.com/kevinmtanadi/goinsta/utilities"
 )
 
 // Account is personal account object

@@ -5,7 +5,7 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/kevinmtanadi/goinsta/v3"
+	"github.com/kevinmtanadi/goinsta"
 )
 
 func TestSearchUser(t *testing.T) {

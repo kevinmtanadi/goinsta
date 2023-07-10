@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/kevinmtanadi/goinsta/v3"
+	"github.com/kevinmtanadi/goinsta"
 )
 
 func TestTimeline(t *testing.T) {

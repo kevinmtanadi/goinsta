@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/kevinmtanadi/goinsta/v3"
+	"github.com/kevinmtanadi/goinsta"
 )
 
 func TestIGTVChannel(t *testing.T) {

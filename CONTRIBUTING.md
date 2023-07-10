@@ -10,13 +10,14 @@ If you want to contribute to Goinsta API you must follow a simple instructions.
 # Tests
 
 You need at least one goinsta exported object
+
 ```
 package main
 
 import (
 	"fmt"
-	"github.com/Davincible/goinsta/v3"
-	"github.com/Davincible/goinsta/v3/utilities"
+	"github.com/Davincible/goinsta"
+	"github.com/Davincible/goinsta/utilities"
 )
 
 func main() {
@@ -30,6 +31,7 @@ func main() {
 ```
 
 Then you can use the output generated above to run your tests in the cli
+
 ```
 INSTAGRAM_BASE64_USERNAME=BASE64_OUTPUT go test ./...
 ```
